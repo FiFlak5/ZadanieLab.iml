@@ -1,0 +1,136 @@
+  <div id="body">
+        <div id="data">
+                <h1>Dane mojego motocykla: </h1>
+            <ul>
+                <li>Marka: {{marka}}</li>
+                <li>Model: {{model}}</li>
+                <li>Rok: {{rocznik}}</li>
+                <li>Rodzaj paliwa: {{rodzPaliwa}}</li>
+                <li>Pojemność: {{pojemnosc}}</li>
+                <li>Przebieg: {{przebieg}} tyś</li>
+                <li>Cena: {{cena}} zł</li>
+
+                <h3>Dane osoby, która mi go sprzedała:</h3>
+
+                <li>Imię: {{daneOsoby.imie}}</li>
+                <li>Nazwisko: {{daneOsoby.nazwisko}}</li>
+                <li>Ulica: {{daneOsoby.ulica}}  {{daneOsoby.nrBudynku}}</li>
+                <li>Miasto: {{daneOsoby.miasto}}</li>
+                <li>Email: {{daneOsoby.email}}</li>
+                <li>Telefon: {{daneOsoby.telefon}}</li>
+            </ul>
+        </div>
+
+
+        <div id="thattodo">
+
+            <h1>Co zrobione: </h1>
+            <form>
+                <div>
+                    <label for="taskField">Co nowego: </label>
+                    <input type="text" #task id="taskField">
+                    <button (click)="addTask(task.value)">Dodaj</button>
+                </div>
+            </form>
+
+
+            <ul>
+                <li *ngFor="let task of tasks; let i = index">
+                    <button (click)="deleteTask(task)">Usuń</button>
+                    {{i + 1}}.{{task}}
+                </li>
+            </ul>
+        </div>
+
+        <div id="image">
+            <img src="../../assets/brum.jpg" alt="MojeMoto" width="50%" height="50%">
+
+            <img src="../../assets/brum2.jpg" alt="MojeMoto2" width="50%" height="50%">
+        </div>
+
+        <div id="edit">
+            <h1>Edycja danych:</h1>
+            <div>
+                <button (click)="changeEditMode()">Edytuj</button>
+            </div>
+            <br>
+            <div *ngIf="editMode">
+                <form>
+                    <div>
+                        <label>Marka:</label>
+                        <input type="text" [(ngModel)]="marka" name="marka">
+                    </div>
+                    <div>
+                        <label>Model:</label>
+                        <input type="text" [(ngModel)]="model" name="model">
+                    </div>
+
+                    <div>
+                        <label>Rok:</label>
+                        <input type="number" [(ngModel)]="rocznik" name="rok">
+                    </div>
+
+                    <div>
+                        <label>Rodzaj paliwa:</label>
+                        <input type="text" [(ngModel)]="rodzPaliwa" name="rodzPaliwa">
+                    </div>
+
+                    <div>
+                        <label>Rrzebieg:</label>
+                        <input type="text" [(ngModel)]="przebieg" name="przebieg">
+                    </div>
+
+                    <div>
+                        <label>Pojemność:</label>
+                        <input type="text" [(ngModel)]="pojemnosc" name="pojemnosc">
+                    </div>
+
+                    <div>
+                        <label>Cena: </label>
+                        <input type="text" [(ngModel)]="cena" name="cena">
+                    </div>
+
+
+                    <div>
+                        <h3>Dane osoby :</h3>
+                    </div>
+
+                    <div>
+                        <label> Imie: </label>
+                        <input type="text" [(ngModel)]="daneOsoby.imie" name="daneOsoby.imie">
+                    </div>
+                    <div>
+                        <label> Nazwisko: </label>
+                        <input type="text" [(ngModel)]="daneOsoby.nazwisko" name="daneOsoby.nazwisko">
+                    </div>
+                    <div>
+                        <label> Ulica: </label>
+                        <input type="text" [(ngModel)]="daneOsoby.ulica" name="daneOsoby.ulica">
+                    </div>
+
+                    <div>
+                        <label>Numer budynku: </label>
+                        <input type="text" [(ngModel)]="daneOsoby.nrBudynku" name="daneOsoby.nrBudynku">
+                    </div>
+
+                    <div>
+                        <label>Miasto: </label>
+                        <input type="text" [(ngModel)]="daneOsoby.miasto" name="address.city">
+                    </div>
+
+                    <div>
+                        <label>Email: </label>
+                        <input type="text" [(ngModel)]="daneOsoby.email" name="daneOsoby.email">
+                    </div>
+                    <div>
+                        <label>Telefon: </label>
+                        <input type="text" [(ngModel)]="daneOsoby.telefon" name="daneOsoby.telefon">
+                    </div>
+
+                </form>
+                <br>
+            </div>
+        </div>
+
+    </div>
+

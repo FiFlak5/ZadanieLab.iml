@@ -1,0 +1,57 @@
+ul{
+    list-style: none;
+    font-size: 20px;
+}
+#nav{
+
+    height:600px;
+    background-color: #7c7c7c;
+}
+#contener, h1{
+
+    text-align: center;
+    color: black;
+}
+
+
+#thattodo{
+    padding-bottom: 1px;
+    text-align: center;
+    width: 100%;
+    height: 80%;
+    background-color: #cbcbcb;
+}
+
+
+#data
+{
+    padding-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: #cbcbcb;
+}
+#edit{
+
+    margin-bottom: 26px;
+    width:100%;
+    height: 100%;
+    text-align: center ;
+    background: #7c7c7c;
+
+}
+#edit ,form, input{
+
+    input-style:none;
+}
+
+#body{
+
+   margin-left: 100px;
+   margin-right: 100px;
+}
+#image{
+   padding-top: 26px;
+}
+
+
